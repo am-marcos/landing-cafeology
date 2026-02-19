@@ -224,128 +224,85 @@ export function WhyChoose() {
         </div>
 
         {/* Feature cards */}
-        <div className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 max-w-[1000px]">
-            {/* Feature 1 */}
-            <div className="flex flex-col items-start text-left p-6 bg-white rounded-2xl border border-[#E6E1D9] shadow-[0_12px_28px_rgba(0,0,0,0.18)] w-[300px] h-[300px]">
-              <div className="w-16 h-16 rounded-2xl bg-[#FFDE3E] flex items-center justify-center mb-6 mt-4 ml-4">
-                <Image
-                  src="/images/icon-cup-coffee.svg"
-                  alt="Sélection qualité"
-                  width={32}
-                  height={32}
-                />
+        <div className="flex flex-wrap justify-center gap-8">
+          {[
+            {
+              icon: "/images/icon-cup-coffee.svg",
+              alt: "Sélection qualité",
+              title: "Sélection qualité",
+              description: "Tous les cafés sont vérifiés et respectent les standards SCA de qualité.",
+            },
+            {
+              icon: "/images/icon-map.svg",
+              alt: "Carte interactive",
+              title: "Carte interactive",
+              description: "Géolocalisation précise et navigation GPS intégrée pour trouver votre café.",
+            },
+            {
+              icon: "/images/icon-etoile.svg",
+              alt: "Avis vérifiés",
+              title: "Avis vérifiés",
+              description: "Notes et commentaires authentiques de notre communauté d'amateurs.",
+            },
+          ].map((feature) => (
+            <div
+              key={feature.title}
+              style={{
+                width: "324px",
+                height: "259px",
+                borderRadius: "16px",
+                background: "#FFF",
+                boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.10), 0 4px 6px -4px rgba(0, 0, 0, 0.10)",
+                padding: "24px",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              {/* Icône – specs Figma : 56×56, border-radius 14px, background #FFDE3E */}
+              <div
+                style={{
+                  width: "56px",
+                  height: "56px",
+                  borderRadius: "14px",
+                  background: "#FFDE3E",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  flexShrink: 0,
+                  marginBottom: "20px",
+                }}
+              >
+                <Image src={feature.icon} alt={feature.alt} width={28} height={28} />
               </div>
-              <h3
-                style={{
-                  color: "#3D0F0F",
-                  fontFamily: "Proxima Soft Condensed",
-                  fontSize: "24px",
-                  fontWeight: 900,
-                  lineHeight: "120%",
-                  marginBottom: "12px",
-                }}
-              >
-                Sélection qualité
-              </h3>
-              <p
-                style={{
-                  color: "rgba(61, 15, 15, 0.60)",
-                  textAlign: "left",
-                  fontFamily: "Roboto Mono",
-                  fontSize: "14px",
-                  fontWeight: 400,
-                  lineHeight: "150%",
-                  display: "-webkit-box",
-                  WebkitLineClamp: 3,
-                  WebkitBoxOrient: "vertical",
-                  overflow: "hidden",
-                }}
-              >
-                Tous les cafés sont vérifiés et respectent les standards SCA
-              </p>
-            </div>
 
-            {/* Feature 2 */}
-            <div className="flex flex-col items-start text-left p-6 bg-white rounded-2xl border border-[#E6E1D9] shadow-[0_12px_28px_rgba(0,0,0,0.18)] w-[300px] h-[300px]">
-              <div className="w-16 h-16 rounded-2xl bg-[#FFDE3E] flex items-center justify-center mb-6 mt-4 ml-4">
-                <Image
-                  src="/images/icon-map.svg"
-                  alt="Carte interactive"
-                  width={32}
-                  height={32}
-                />
-              </div>
+              {/* Titre */}
               <h3
                 style={{
                   color: "#3D0F0F",
                   fontFamily: "Proxima Soft Condensed",
-                  fontSize: "24px",
+                  fontSize: "22px",
                   fontWeight: 900,
                   lineHeight: "120%",
-                  marginBottom: "12px",
+                  marginBottom: "10px",
                 }}
               >
-                Carte interactive
+                {feature.title}
               </h3>
-              <p
-                style={{
-                  color: "rgba(61, 15, 15, 0.60)",
-                  textAlign: "left",
-                  fontFamily: "Roboto Mono",
-                  fontSize: "14px",
-                  fontWeight: 400,
-                  lineHeight: "150%",
-                  display: "-webkit-box",
-                  WebkitLineClamp: 3,
-                  WebkitBoxOrient: "vertical",
-                  overflow: "hidden",
-                }}
-              >
-                Géolocalisation précise et navigation GPS intégrée
-              </p>
-            </div>
 
-            {/* Feature 3 */}
-            <div className="flex flex-col items-start text-left p-6 bg-white rounded-2xl border border-[#E6E1D9] shadow-[0_12px_28px_rgba(0,0,0,0.18)] w-[300px] h-[300px]">
-              <div className="w-16 h-16 rounded-2xl bg-[#FFDE3E] flex items-center justify-center mb-6 mt-4 ml-4">
-                <Image
-                  src="/images/icon-etoile.svg"
-                  alt="Avis vérifiés"
-                  width={32}
-                  height={32}
-                />
-              </div>
-              <h3
-                style={{
-                  color: "#3D0F0F",
-                  fontFamily: "Proxima Soft Condensed",
-                  fontSize: "24px",
-                  fontWeight: 900,
-                  lineHeight: "120%",
-                  marginBottom: "12px",
-                }}
-              >
-                Avis vérifiés
-              </h3>
+              {/* Description */}
               <p
                 style={{
                   color: "rgba(61, 15, 15, 0.60)",
-                  textAlign: "left",
                   fontFamily: "Roboto Mono",
-                  fontSize: "14px",
+                  fontSize: "13px",
                   fontWeight: 400,
-                  lineHeight: "150%",
-                  display: "-webkit-box",
-                  WebkitLineClamp: 3,
-                  WebkitBoxOrient: "vertical",
-                  overflow: "hidden",
+                  lineHeight: "155%",
                 }}
               >
-                Notes et commentaires authentiques de notre communauté
+                {feature.description}
               </p>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
