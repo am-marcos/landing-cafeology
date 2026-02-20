@@ -32,7 +32,7 @@ export function Hero() {
           </div>
 
           <div className="absolute inset-0 flex flex-col items-center justify-center translate-y-43 text-center">
-            <h1 className="text-center text-[#000]" style={{ fontFamily: "Proxima Soft Condensed", fontSize: "32px", fontStyle: "normal", fontWeight: 900, lineHeight: "120%" }}>
+            <h1 className="text-center text-[#000]" style={{ fontFamily: "Roboto Condensed, sans-serif", fontSize: "32px", fontStyle: "normal", fontWeight: 900, lineHeight: "120%" }}>
               Explorez les meilleurs cafés de spécialité à Paris.
             </h1>
             

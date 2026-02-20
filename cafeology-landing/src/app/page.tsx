@@ -3,12 +3,11 @@ import { Hero } from "./client/components/Home";
 import {
   HowItWorks,
   WhyChoose,
-  AppPreview,
-  FeaturedCafes,
-  Testimonials,
-  DownloadCTA,
-  Footer,
+  FAQ,
+  MapSection,
+  DownloadSection,
 } from "./client/components/Content";
+import { Footer } from "./client/components/Footer";
 
 export default function Home() {
   return (
@@ -25,17 +24,14 @@ export default function Home() {
       {/* Section 2 – Pourquoi choisir Caféology ? */}
       <WhyChoose />
 
-      {/* Section 3 – Aperçu de l'application */}
-      <AppPreview />
+      {/* Section 3 – FAQ */}
+      <FAQ />
 
-      {/* Section 4 – Cafés à la une */}
-      <FeaturedCafes />
+      {/* Section 4 – Carte Paris */}
+      <MapSection />
 
-      {/* Section 5 – Témoignages */}
-      <Testimonials />
-
-      {/* Section 6 – CTA Téléchargement */}
-      <DownloadCTA />
+      {/* Section 5 – Télécharger l'app */}
+      <DownloadSection />
 
       {/* Footer */}
       <Footer />

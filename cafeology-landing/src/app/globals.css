@@ -19,3 +19,11 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.faq-question {
+  color: rgba(61, 15, 15, 0.60);
+}
+
+details[open] summary .faq-question {
+  color: #3D0F0F;
+}
