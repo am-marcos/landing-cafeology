@@ -1,5 +1,36 @@
 import Image from "next/image";
 
+const howItWorksSteps = [
+  {
+    title: "Téléchargez",
+    description: "Installez gratuitement l'application Caféology sur votre smartphone",
+    icon: "/images/icon-telecharger.svg",
+    alt: "Télécharger",
+    bg: "#FFDE3E",
+  },
+  {
+    title: "Découvrez",
+    description: "Trouvez les meilleurs cafés de spécialité autour de vous grâce à la carte interactive",
+    icon: "/images/icon-map.svg",
+    alt: "Découvrir",
+    bg: "#9A2425",
+  },
+  {
+    title: "Savourez",
+    description: "Profitez d'un café d'exception préparé par des baristas passionnés",
+    icon: "/images/icon-cup-coffee.svg",
+    alt: "Savourer",
+    bg: "#3D0F0F",
+  },
+  {
+    title: "Partagez",
+    description: "Notez votre expérience et aidez la communauté à découvrir de nouvelles pépites",
+    icon: "/images/icon-etoile.svg",
+    alt: "Partager",
+    bg: "#FFDE3E",
+  },
+];
+
 /* ─────────────────────────────────────────────
    SECTION 1 – Comment ça marche ?
 ───────────────────────────────────────────── */
@@ -42,139 +73,66 @@ export function HowItWorks() {
         </div>
 
         {/* Steps grid */}
-        <div
-          className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-6"
-          style={{ marginTop: "60px" }}
-        >
-          {/* Step 1 */}
-          <div className="flex flex-col items-center text-center">
-            <div
-              className="w-20 h-20 rounded-full bg-[#FFDE3E] flex items-center justify-center"
-              style={{ marginBottom: "24px" }}
-            >
-              <Image
-                src="/images/icon-telecharger.svg"
-                alt="Télécharger"
-                width={36}
-                height={36}
-              />
-            </div>
-            <h3 className="text-lg font-bold text-[#1f2a44] mb-2">
-              Téléchargez
-            </h3>
-            <p
-              style={{
-                color: "rgba(61, 15, 15, 0.60)",
-                textAlign: "center",
-                fontFamily: "Roboto Mono",
-                fontSize: "14px",
-                fontWeight: 400,
-                lineHeight: "22px",
-                maxWidth: "200px",
-                margin: "0 auto",
-              }}
-            >
-              Installez gratuitement l'application Caféology sur votre
-              smartphone
-            </p>
-          </div>
+        <div className="relative" style={{ marginTop: "60px" }}>
+          <div
+            className="hidden md:block"
+            style={{
+              position: "absolute",
+              top: "38px",
+              left: "12.5%",
+              right: "12.5%",
+              height: "0.5px",
+              background: "rgba(61, 15, 15, 0.16)",
+              zIndex: 0,
+            }}
+          />
 
-          {/* Step 2 */}
-          <div className="flex flex-col items-center text-center">
-            <div
-              className="w-20 h-20 rounded-full bg-[#9A2425] flex items-center justify-center"
-              style={{ marginBottom: "24px" }}
-            >
-              <Image
-                src="/images/icon-map.svg"
-                alt="Découvrir"
-                width={36}
-                height={36}
-              />
-            </div>
-            <h3 className="text-lg font-bold text-[#1f2a44] mb-2">
-              Découvrez
-            </h3>
-            <p
-              style={{
-                color: "rgba(61, 15, 15, 0.60)",
-                textAlign: "center",
-                fontFamily: "Roboto Mono",
-                fontSize: "14px",
-                fontWeight: 400,
-                lineHeight: "22px",
-                maxWidth: "200px",
-                margin: "0 auto",
-              }}
-            >
-              Trouvez les meilleurs cafés de spécialité autour de vous grâce à
-              la carte interactive
-            </p>
-          </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-6 relative z-10">
+            {howItWorksSteps.map((step, index) => (
+              <div key={step.title} className="howitworks-step flex flex-col items-center text-center relative">
+                <span
+                  className="howitworks-number hidden md:block"
+                  style={{
+                    position: "absolute",
+                    top: "80px",
+                    left: "calc(50% + 54px)",
+                    transform: "translateY(-50%)",
+                    fontFamily: "Roboto Condensed, sans-serif",
+                    fontSize: "60px",
+                    fontWeight: 900,
+                    color: "rgba(61, 15, 15, 0.08)",
+                    lineHeight: 1,
+                    pointerEvents: "none",
+                    userSelect: "none",
+                  }}
+                >
+                  {index + 1}
+                </span>
 
-          {/* Step 3 */}
-          <div className="flex flex-col items-center text-center">
-            <div
-              className="w-20 h-20 rounded-full bg-[#3D0F0F] flex items-center justify-center"
-              style={{ marginBottom: "24px" }}
-            >
-              <Image
-                src="/images/icon-cup-coffee.svg"
-                alt="Savourer"
-                width={36}
-                height={36}
-              />
-            </div>
-            <h3 className="text-lg font-bold text-[#1f2a44] mb-2">
-              Savourez
-            </h3>
-            <p
-              style={{
-                color: "rgba(61, 15, 15, 0.60)",
-                textAlign: "center",
-                fontFamily: "Roboto Mono",
-                fontSize: "14px",
-                fontWeight: 400,
-                lineHeight: "22px",
-                maxWidth: "200px",
-                margin: "0 auto",
-              }}
-            >
-              Profitez d'un café d'exception préparé par des baristas passionnés
-            </p>
-          </div>
+                <div
+                  className="howitworks-iconwrap w-20 h-20 rounded-full flex items-center justify-center"
+                  style={{ marginBottom: "24px", background: step.bg }}
+                >
+                  <Image src={step.icon} alt={step.alt} width={36} height={36} />
+                </div>
 
-          {/* Step 4 */}
-          <div className="flex flex-col items-center text-center">
-            <div
-              className="w-20 h-20 rounded-full bg-[#FFDE3E] flex items-center justify-center"
-              style={{ marginBottom: "24px" }}
-            >
-              <Image
-                src="/images/icon-etoile.svg"
-                alt="Partager"
-                width={36}
-                height={36}
-              />
-            </div>
-            <h3 className="text-lg font-bold text-[#1f2a44] mb-2">
-              Partagez
-            </h3>
-            <p
-              style={{
-                color: "rgba(61, 15, 15, 0.60)",
-                textAlign: "center",
-                fontFamily: "Roboto Mono",
-                fontSize: "14px",
-                fontWeight: 400,
-                lineHeight: "22px",
-                maxWidth: "200px",
-                margin: "0 auto",
-              }}
-            >
-              Notez votre expérience et aidez la communauté à découvrir de
-              nouvelles pépites
-            </p>
+                <h3 className="text-lg font-bold text-[#3D0F0F] mb-2">{step.title}</h3>
+                <p
+                  style={{
+                    color: "rgba(61, 15, 15, 0.60)",
+                    textAlign: "center",
+                    fontFamily: "Roboto Mono",
+                    fontSize: "14px",
+                    fontWeight: 400,
+                    lineHeight: "22px",
+                    maxWidth: "200px",
+                    margin: "0 auto",
+                  }}
+                >
+                  {step.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

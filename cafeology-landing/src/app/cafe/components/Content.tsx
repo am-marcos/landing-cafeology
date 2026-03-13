@@ -122,8 +122,8 @@ export function Boostez() {
           }}
         >
           {features.map((f) => (
-            <div key={f.title} style={{ textAlign: "center", padding: "0 16px" }}>
-              <div style={{ display: "flex", justifyContent: "center", marginBottom: "20px" }}>
+            <div key={f.title} className="cafe-feature-card" style={{ textAlign: "center", padding: "0 16px" }}>
+              <div className="cafe-feature-icon" style={{ display: "flex", justifyContent: "center", marginBottom: "20px" }}>
                 {f.icon}
               </div>
               <h3
@@ -237,14 +237,27 @@ export function HowToJoin() {
 
         <div
           style={{
+            position: "relative",
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
             gap: "32px",
             alignItems: "start",
           }}
         >
+          <div
+            className="hidden md:block"
+            style={{
+              position: "absolute",
+              top: "26px",
+              left: "16.66%",
+              right: "16.66%",
+              height: "1px",
+              background: "rgba(31, 42, 68, 0.18)",
+              zIndex: 0,
+            }}
+          />
           {steps.map((s) => (
-            <div key={s.number} style={{ textAlign: "center", padding: "0 16px", position: "relative" }}>
+            <div key={s.number} className="cafe-step" style={{ textAlign: "center", padding: "0 16px", position: "relative" }}>
               {/* Number background */}
               <div
                 style={{
@@ -265,7 +278,7 @@ export function HowToJoin() {
                 {s.number}
               </div>
               <div style={{ position: "relative", zIndex: 1 }}>
-                <div style={{ display: "flex", justifyContent: "center", marginBottom: "16px" }}>
+                <div className="cafe-step-icon" style={{ display: "flex", justifyContent: "center", marginBottom: "16px" }}>
                   {s.icon}
                 </div>
                 <h3

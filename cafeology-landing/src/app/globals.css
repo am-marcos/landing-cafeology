@@ -59,3 +59,39 @@ p {
 details[open] summary .faq-question {
   color: #3D0F0F;
 }
+
+.howitworks-iconwrap {
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.howitworks-number {
+  transition: transform 220ms ease, color 220ms ease;
+}
+
+.howitworks-step:hover .howitworks-iconwrap {
+  transform: translateY(-5px) rotate(-2deg) scale(1.03);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+}
+
+.howitworks-step:hover .howitworks-number {
+  transform: translateY(-50%) translateX(4px);
+  color: rgba(61, 15, 15, 0.14);
+}
+
+.cafe-step-icon {
+  transition: transform 220ms ease, filter 220ms ease;
+}
+
+.cafe-step:hover .cafe-step-icon {
+  transform: translateY(-4px) scale(1.03);
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.14));
+}
+
+.cafe-feature-icon {
+  transition: transform 240ms ease, filter 240ms ease;
+}
+
+.cafe-feature-card:hover .cafe-feature-icon {
+  transform: translateY(-6px) rotate(-2deg) scale(1.04);
+  filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.16));
+}
