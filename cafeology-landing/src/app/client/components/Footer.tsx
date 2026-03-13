@@ -27,7 +27,7 @@ export function Footer() {
             <h1
               style={{
                 color: "#3D0F0F",
-                fontFamily: "'Proxima Soft Condensed', sans-serif",
+                fontFamily: "'Proxima Soft Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif",
                 fontSize: "32px",
                 fontWeight: 900,
                 lineHeight: "120%",
@@ -44,7 +44,7 @@ export function Footer() {
               style={{
                 padding: "10px 22px",
                 borderRadius: "999px",
-                background: "#FFDF5C",
+                background: "#FCDF5F",
                 color: "#1f2a44",
                 fontWeight: 700,
                 fontSize: "14px",

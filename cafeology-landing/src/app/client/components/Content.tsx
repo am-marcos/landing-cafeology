@@ -401,7 +401,7 @@ export function FAQ() {
                   <span
                     className="faq-question"
                     style={{
-                      fontFamily: "'Proxima Soft Condensed', sans-serif",
+                      fontFamily: "'Proxima Soft Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif",
                       fontSize: "32px",
                       fontWeight: 900,
                       lineHeight: "41.6px",
@@ -469,7 +469,7 @@ export function MapSection() {
           style={{
             color: "#3D0F0F",
             textAlign: "center",
-            fontFamily: "'Proxima Soft Condensed', sans-serif",
+            fontFamily: "'Proxima Soft Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif",
             fontSize: "32px",
             fontWeight: 900,
             lineHeight: "120%",
@@ -542,7 +542,7 @@ export function MapSection() {
               style={{
                 color: "#FFF",
                 textAlign: "center",
-                fontFamily: "'Proxima Soft Condensed', sans-serif",
+                fontFamily: "'Proxima Soft Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif",
                 fontSize: "20px",
                 fontStyle: "normal",
                 fontWeight: 900,
@@ -637,7 +637,7 @@ export function DownloadSection() {
               <h2
                 style={{
                   color: "#3D0F0F",
-                  fontFamily: "'Proxima Soft Condensed', sans-serif",
+                  fontFamily: "'Proxima Soft Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif",
                   fontSize: "25px",
                   fontWeight: 900,
                   lineHeight: "110%",
@@ -684,7 +684,7 @@ export function DownloadSection() {
                     <div style={{ color: "#3D0F0F", fontFamily: "Roboto Mono", fontSize: "10px", fontWeight: 400 }}>
                       Télécharger sur
                     </div>
-                    <div style={{ color: "#3D0F0F", fontFamily: "'Proxima Soft Condensed', sans-serif", fontSize: "16px", fontWeight: 900 }}>
+                    <div style={{ color: "#3D0F0F", fontFamily: "'Proxima Soft Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif", fontSize: "16px", fontWeight: 900 }}>
                       App Store
                     </div>
                   </div>
@@ -708,7 +708,7 @@ export function DownloadSection() {
                     <div style={{ color: "#3D0F0F", fontFamily: "Roboto Mono", fontSize: "10px", fontWeight: 400 }}>
                       Disponible sur
                     </div>
-                    <div style={{ color: "#3D0F0F", fontFamily: "'Proxima Soft Condensed', sans-serif", fontSize: "16px", fontWeight: 900 }}>
+                    <div style={{ color: "#3D0F0F", fontFamily: "'Proxima Soft Condensed', 'Roboto Condensed', 'Arial Narrow', sans-serif", fontSize: "16px", fontWeight: 900 }}>
                       Google Play
                     </div>
                   </div>

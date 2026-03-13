@@ -41,7 +41,7 @@ export function Hero() {
             </p>
             <button
               className="text-[#1f2a44] font-bold text-sm"
-              style={{ marginTop: "30px", borderRadius: "50px", background: "#FFDE3E", display: "flex", padding: "14px 24px", justifyContent: "center", alignItems: "center" }}
+              style={{ marginTop: "30px", borderRadius: "50px", background: "#FCDF5F", display: "flex", padding: "14px 24px", justifyContent: "center", alignItems: "center" }}
             >
               Trouver un café maintenant
             </button>

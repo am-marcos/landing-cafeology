@@ -23,18 +23,18 @@ export function Header() {
         </div>
 
         <div className="flex items-center gap-6">
-          <a href="#concept" className="text-[#1f2a44] hover:text-[#8b4513] font-semibold text-sm transition-colors">
-            Le concept
+          <a href="#fonctionnalites" className="text-[#1f2a44] hover:text-[#8b4513] font-semibold text-sm transition-colors">
+            Fonctionnalités
           </a>
-          <a href="#culture" className="text-[#1f2a44] hover:text-[#8b4513] font-semibold text-sm transition-colors">
-            Culture café
+          <a href="#tarifs" className="text-[#1f2a44] hover:text-[#8b4513] font-semibold text-sm transition-colors">
+            Tarifs
           </a>
           <Link
-            href="/cafe"
+            href="/"
             style={{ padding: "10px 22px", borderRadius: "999px" }}
             className="bg-[#FCDF5F] text-[#1f2a44] font-bold text-sm hover:bg-[#ffb300] transition-all"
           >
-            Vous êtes un café ?
+            Vous cherchez un café ?
           </Link>
           <button
             style={{ padding: "10px 22px", borderRadius: "999px" }}
